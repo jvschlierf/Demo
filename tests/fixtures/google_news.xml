@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss version="2.0"><channel><title>"Burberry" when:1d - Google News</title>
+<item>
+  <title>Burberry weighs sale of beauty licence, sources say - Reuters</title>
+  <link>https://news.google.com/rss/articles/abc123?oc=5</link>
+  <pubDate>Fri, 30 Oct 2026 07:15:00 GMT</pubDate>
+  <description>&lt;a href="https://news.google.com/rss/articles/abc123"&gt;Burberry weighs sale&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;font color="#6f6f6f"&gt;Reuters&lt;/font&gt;</description>
+  <source url="https://www.reuters.com">Reuters</source>
+</item>
+<item>
+  <title>Burberry item with no date</title>
+  <link>https://news.google.com/rss/articles/nodate</link>
+</item>
+<item>
+  <title>Burberry item with a bad date</title>
+  <link>https://news.google.com/rss/articles/baddate</link>
+  <pubDate>yesterday-ish</pubDate>
+</item>
+<item>
+  <title>Burberry item with no link</title>
+  <pubDate>Fri, 30 Oct 2026 07:15:00 GMT</pubDate>
+</item>
+</channel></rss>

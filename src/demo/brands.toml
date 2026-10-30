@@ -1,0 +1,175 @@
+# Brands tracked by the morning report.
+# sector: "luxury" or "sportswear". ticker may be omitted for private companies.
+# aliases: sub-brands and key people; matched case-insensitively on word boundaries.
+# Every brand also gets a Claude web search each morning; set scout = false to skip one.
+# Qualify ambiguous names ("Coach handbag", not "Coach"): aliases are also Google News search terms.
+
+# --- Luxury -----------------------------------------------------------------
+
+[[brand]]
+name = "LVMH"
+sector = "luxury"
+ticker = "MC.PA"
+aliases = ["Louis Vuitton", "Dior", "Tiffany & Co", "Moët Hennessy", "Bernard Arnault"]
+
+[[brand]]
+name = "Kering"
+sector = "luxury"
+ticker = "KER.PA"
+aliases = ["Gucci", "Saint Laurent", "Bottega Veneta", "Balenciaga", "Pinault"]
+
+[[brand]]
+name = "Burberry"
+sector = "luxury"
+ticker = "BRBY.L"
+
+[[brand]]
+name = "Hermès"
+sector = "luxury"
+ticker = "RMS.PA"
+# Not bare "Hermes": collides with Federated Hermes and the parcel firm.
+aliases = ["Hermes International", "Hermès International", "Birkin"]
+
+[[brand]]
+name = "Richemont"
+sector = "luxury"
+ticker = "CFR.SW"
+aliases = ["Cartier", "Van Cleef & Arpels"]
+
+[[brand]]
+name = "Prada"
+sector = "luxury"
+ticker = "1913.HK"
+aliases = ["Miu Miu", "Versace"]
+
+[[brand]]
+name = "Moncler"
+sector = "luxury"
+ticker = "MONC.MI"
+
+[[brand]]
+name = "Brunello Cucinelli"
+sector = "luxury"
+ticker = "BC.MI"
+
+[[brand]]
+name = "Hugo Boss"
+sector = "luxury"
+ticker = "BOSS.DE"
+
+[[brand]]
+name = "Ferragamo"
+sector = "luxury"
+ticker = "SFER.MI"
+
+[[brand]]
+name = "Mulberry"
+sector = "luxury"
+ticker = "MUL.L"
+
+[[brand]]
+name = "Swatch Group"
+sector = "luxury"
+ticker = "UHR.SW"
+aliases = ["Omega watch", "Omega watches", "Swatch"]
+
+[[brand]]
+name = "Watches of Switzerland"
+sector = "luxury"
+ticker = "WOSG.L"
+
+[[brand]]
+name = "Tapestry"
+sector = "luxury"
+ticker = "TPR"
+aliases = ["Coach handbag", "Coach handbags", "Coach New York", "Kate Spade"]
+
+[[brand]]
+name = "Capri Holdings"
+sector = "luxury"
+ticker = "CPRI"
+aliases = ["Michael Kors", "Jimmy Choo"]
+
+# --- Sportswear -------------------------------------------------------------
+
+[[brand]]
+name = "Adidas"
+sector = "sportswear"
+ticker = "ADS.DE"
+
+[[brand]]
+name = "Nike"
+sector = "sportswear"
+ticker = "NKE"
+aliases = ["Jordan Brand", "Converse"]
+
+[[brand]]
+name = "Skechers"
+sector = "sportswear"
+# Taken private by 3G Capital in 2025; tracked for news only.
+
+[[brand]]
+name = "Puma"
+sector = "sportswear"
+ticker = "PUM.DE"
+
+[[brand]]
+name = "JD Sports"
+sector = "sportswear"
+ticker = "JD.L"
+
+[[brand]]
+name = "Frasers Group"
+sector = "sportswear"
+ticker = "FRAS.L"
+aliases = ["Sports Direct", "Mike Ashley"]
+
+[[brand]]
+name = "On Holding"
+sector = "sportswear"
+ticker = "ONON"
+aliases = ["On Running"]
+
+[[brand]]
+name = "Amer Sports"
+sector = "sportswear"
+ticker = "AS"
+aliases = ["Salomon", "Arc'teryx", "Wilson Sporting Goods"]
+
+[[brand]]
+name = "Deckers"
+sector = "sportswear"
+ticker = "DECK"
+aliases = ["Hoka", "UGG"]
+
+[[brand]]
+name = "VF Corp"
+sector = "sportswear"
+ticker = "VFC"
+aliases = ["The North Face", "Vans shoes", "Vans trainers", "Timberland"]
+
+[[brand]]
+name = "ASICS"
+sector = "sportswear"
+ticker = "7936.T"
+
+[[brand]]
+name = "Lululemon"
+sector = "sportswear"
+ticker = "LULU"
+
+[[brand]]
+name = "Under Armour"
+sector = "sportswear"
+ticker = "UAA"
+
+[[brand]]
+name = "Birkenstock"
+sector = "sportswear"
+ticker = "BIRK"
+
+[[brand]]
+name = "Dr. Martens"
+sector = "sportswear"
+ticker = "DOCS.L"
+aliases = ["Dr Martens", "Doc Martens"]
