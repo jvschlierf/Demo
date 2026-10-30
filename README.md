@@ -14,11 +14,11 @@ uv run demo run             # writes out/YYYY-MM-DD/report.html and report.md
 
 ## Commands
 
-| Command | What it does |
-|---|---|
-| `uv run demo run [--hours 24] [--out out] [--no-web]` | Build today's report from the last `--hours` of coverage. `--no-web` skips the web search for a cheaper run. |
+| Command                                                                                         | What it does                                                                                                                                    |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `uv run demo run [--hours 24] [--out out] [--no-web]`                                         | Build today's report from the last `--hours` of coverage. `--no-web` skips the web search for a cheaper run.                                |
 | `uv run demo sentiment set <story-id> {positive,neutral,negative} [--brand B] [--note "..."]` | Override a story's sentiment. The story ID is shown next to each story in the report. `--brand` is needed when a story covers several brands. |
-| `uv run demo sentiment list` | List your overrides. |
+| `uv run demo sentiment list`                                                                  | List your overrides.                                                                                                                            |
 
 All commands take `--db PATH` (default `data/tracker.db`).
 
@@ -71,29 +71,19 @@ Use specific aliases (e.g. "Coach handbag" rather than "Coach"), because aliases
 
 ## Layout
 
-| Path | Purpose |
-|---|---|
-| `src/demo/sources.py` | RSS/Atom feeds, Reddit, filtering |
-| `src/demo/scout.py` | Claude web search per brand |
-| `src/demo/dedupe.py` | Story IDs and duplicate merging |
-| `src/demo/analyse.py` | Claude screen and per-story analysis |
-| `src/demo/summarise.py` | Executive summary |
-| `src/demo/store.py` | SQLite store and sentiment overrides |
-| `src/demo/report.py` | Markdown and HTML rendering |
-| `src/demo/pipeline.py` | Runs the steps end to end |
-| `src/demo/cli.py` | `demo` command |
+| Path                      | Purpose                              |
+| ------------------------- | ------------------------------------ |
+| `src/demo/sources.py`   | RSS/Atom feeds, Reddit, filtering    |
+| `src/demo/scout.py`     | Claude web search per brand          |
+| `src/demo/dedupe.py`    | Story IDs and duplicate merging      |
+| `src/demo/analyse.py`   | Claude screen and per-story analysis |
+| `src/demo/summarise.py` | Executive summary                    |
+| `src/demo/store.py`     | SQLite store and sentiment overrides |
+| `src/demo/report.py`    | Markdown and HTML rendering          |
+| `src/demo/pipeline.py`  | Runs the steps end to end            |
+| `src/demo/cli.py`       | `demo` command                     |
 
 ## Development
 
 - Tests: `uv run pytest -q`. Tests use no network and a fake Claude client.
 - Lint and format: `uv run ruff check --fix . && uv run ruff format .`
-
-### iCloud note
-
-If this folder is synced by iCloud (e.g. on the Desktop), iCloud hides the files in `.venv` and Python then skips the project's install. `uv run demo` then fails with `No module named 'demo'`.
-
-The fix is to keep the environment in a folder iCloud excludes and link to it. This uses uv's own Python, so Homebrew upgrades can't break it:
-
-```sh
-rm -rf .venv .venv.nosync && uv venv --python-preference only-managed .venv.nosync && ln -s .venv.nosync .venv && uv sync
-```
